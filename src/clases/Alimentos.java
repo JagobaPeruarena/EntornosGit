@@ -37,7 +37,7 @@ public class Alimentos {
 		double respDouble = 0;
 		int respInt = 0;
 		int cont2 = 0;
-		
+		//CAmbios en line
 		//Cambios en local
 		leerFichero(nombres, situaciones, calorias, grasas, proteinas, carbohidratos, tipos, i, scanf);
 
