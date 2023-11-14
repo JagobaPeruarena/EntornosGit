@@ -38,7 +38,7 @@ public class Alimentos {
 		int respInt = 0;
 		int cont2 = 0;
 		
-
+		//Cambios en local
 		leerFichero(nombres, situaciones, calorias, grasas, proteinas, carbohidratos, tipos, i, scanf);
 
 		Scanner scan = new Scanner(System.in);
