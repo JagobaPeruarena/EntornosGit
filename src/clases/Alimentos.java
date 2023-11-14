@@ -206,6 +206,7 @@ public class Alimentos {
 		}
 	}
 
+	//Esta funcion guarda los datos en un fichero
 	private static void guardar(String[] nombres, String[] situaciones, double[] calorias, double[] grasas,
 			double[] proteinas, double[] carbohidratos, String[] tipos) {
 		try {
@@ -224,6 +225,8 @@ public class Alimentos {
 		}
 	}
 
+	
+	//Esta funcion dice la media de el tipo que le introduzcas
 	private static int mediaPorCadaTipo(double[] calorias, double[] grasas, double[] proteinas, double[] carbohidratos,
 			String[] tipos) {
 		int cont2;
@@ -268,6 +271,7 @@ public class Alimentos {
 		return cont2;
 	}
 
+	//Muestra los frutos secos
 	private static void frutosSecos(String[] nombres, String[] situaciones, String[] tipos) {
 		for (int j = 0; j < nombres.length; j++) {
 
@@ -277,6 +281,7 @@ public class Alimentos {
 		}
 	}
 
+	//Muestra los alimentos con calorias superiores a 200
 	private static void alimentosMayor200(String[] nombres, String[] situaciones, double[] calorias) {
 		for (int j = 0; j < nombres.length; j++) {
 
@@ -285,7 +290,7 @@ public class Alimentos {
 			}
 		}
 	}
-
+	//Muestra la cantidad de alimentos por tipo
 	private static int cantidadPorTipo(String[] tipos, int cont2) {
 		for (int cont = 0; cont < tipos.length - 1; cont++) {
 
@@ -309,7 +314,7 @@ public class Alimentos {
 		System.out.println("El tipo de alimento llamado frutos secos tiene " + cont2 + " registros");
 		return cont2;
 	}
-
+	//Mostrar y dar la posibilidad de calorias
 	private static void verYEditarCalorias(String[] nombres, String[] situaciones, double[] calorias, String nombreR,
 			String situacionR, Scanner scan) {
 		String respStri;
@@ -331,7 +336,7 @@ public class Alimentos {
 			}
 		}
 	}
-
+	//Muestra el valor nutricional de cada alimento
 	private static void valorNutricionalAlimento(String[] nombres, String[] situaciones, double[] calorias,
 			double[] grasas, double[] proteinas, double[] carbohidratos, String nombreR) {
 		for (int j = 0; j < nombres.length; j++) {
@@ -343,7 +348,7 @@ public class Alimentos {
 			}
 		}
 	}
-
+	//Devuelve la tandidad de alimentos por ese tipo
 	private static int cantidadDeUnTipo(String[] tipos, String tipoR, int cantAli) {
 		for (int j = 0; j < tipos.length; j++) {
 			if (tipos[j].equals(tipoR)) {
@@ -352,7 +357,7 @@ public class Alimentos {
 		}
 		return cantAli;
 	}
-
+	//Devuelve la cantidad de calorias de un tipo
 	private static double caloriasDeUnTipo(double[] calorias, String[] tipos, String tipoR, double totalCal) {
 		for (int j = 0; j < tipos.length; j++) {
 			if (tipos[j].equals(tipoR)) {
@@ -361,7 +366,7 @@ public class Alimentos {
 		}
 		return totalCal;
 	}
-
+	//Devuelve la cantidad de alimentos de un tipo
 	private static void alimentosDeUnTipo(String[] nombres, String[] tipos, String tipoR) {
 		for (int j = 0; j < tipos.length; j++) {
 
@@ -370,7 +375,7 @@ public class Alimentos {
 			}
 		}
 	}
-
+	//Lee el fichero y lo almacena en arrays
 	private static void leerFichero(String[] nombres, String[] situaciones, double[] calorias, double[] grasas,
 			double[] proteinas, double[] carbohidratos, String[] tipos, int i, Scanner scanf) {
 		String[] partes;
@@ -388,7 +393,7 @@ public class Alimentos {
 			i++;
 		}
 	}
-
+	//Busca un alimento y muestra sus valores
 	private static void buscarYMostrarValores(String[] nombres, String[] situaciones, double[] calorias,
 			double[] grasas, double[] proteinas, double[] carbohidratos, String nombreR, String situacionR,
 			Scanner scan, boolean cambiar) {
@@ -438,7 +443,7 @@ public class Alimentos {
 			}
 		}
 	}
-
+	//Imprime un menu
 	private static void llamar_menu() {
 		System.out.println("--MENU--");
 		System.out.println("Opcion 1: Alimentos de un tipo");
@@ -452,7 +457,7 @@ public class Alimentos {
 		System.out.println("Opcion 9: Eliminar datos");
 		System.out.println("Opcion 0: SALIR y salir como opcion");
 	}
-
+	//Elimina un alimento
 	private static void eliminarDatos(String[] nombres, String[] situaciones, double[] calorias, double[] grasas,
 
 			double[] proteinas, double[] carbohidratos, String[] tipos, Scanner sn2, int cont) {
